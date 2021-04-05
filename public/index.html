@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="./favicon.ico" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js"></script>
+
+    <title>Auto escola</title>
+  </head>
+  <body>
+    <div id="root">
+      <fieldset class="container">
+        <legend>Veículos</legend>
+
+        <form id="form-veiculo" onsubmit="onSubmit(event)">
+          <div class="form-group">
+            <label for="marca">ID</label>
+            <input
+              class="form-control small"
+              type="text"
+              name="id"
+              id="id"
+              disabled
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="marca">Marca</label>
+            <input
+              class="form-control"
+              type="text"
+              name="marca"
+              id="marca"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="modelo_veiculo">Modelo</label>
+            <input
+              class="form-control"
+              type="text"
+              name="modelo_veiculo"
+              id="modelo_veiculo"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="placa">Placa</label>
+            <input
+              class="form-control"
+              type="text"
+              name="placa"
+              id="placa"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="cor">Cor</label>
+            <input
+              class="form-control"
+              type="text"
+              name="cor"
+              id="cor"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="ano_fabricacao">Ano de Fabricação</label>
+            <input
+              class="form-control"
+              type="number"
+              name="ano_fabricacao"
+              id="ano_fabricacao"
+              required
+            />
+          </div>
+
+          <div class="button-group">
+            <button class="btn btn-success" type="submit">Salvar</button>
+            <button class="btn btn-warning" type="reset">Limpar</button>
+          </div>
+        </form>
+
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Marca</th>
+              <th>Modelo</th>
+              <th>Placa</th>
+              <th>Cor</th>
+              <th>Ano</th>
+              <th class="small"></th>
+              <th class="small"></th>
+            </tr>
+          </thead>
+
+          <tbody id="table-body"></tbody>
+        </table>
+      </fieldset>
+    </div>
+  </body>
+</html>
